@@ -155,13 +155,6 @@
 
   
   <url>
-    <loc>https://devslow.github.io/tags/Tomcat/</loc>
-    <lastmod>2024-03-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://devslow.github.io/tags/Javaweb/</loc>
     <lastmod>2024-03-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -183,6 +176,13 @@
   </url>
   
   <url>
+    <loc>https://devslow.github.io/tags/Tomcat/</loc>
+    <lastmod>2024-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://devslow.github.io/tags/Servlet/</loc>
     <lastmod>2024-03-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -190,14 +190,14 @@
   </url>
   
   <url>
-    <loc>https://devslow.github.io/tags/jQuery/</loc>
+    <loc>https://devslow.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2024-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://devslow.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://devslow.github.io/tags/jQuery/</loc>
     <lastmod>2024-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -220,7 +220,7 @@
 
   
   <url>
-    <loc>https://devslow.github.io/categories/Tomcat/</loc>
+    <loc>https://devslow.github.io/categories/Javaweb/</loc>
     <lastmod>2024-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -234,6 +234,13 @@
   </url>
   
   <url>
+    <loc>https://devslow.github.io/categories/Tomcat/</loc>
+    <lastmod>2024-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://devslow.github.io/categories/Servlet/</loc>
     <lastmod>2024-03-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -241,21 +248,7 @@
   </url>
   
   <url>
-    <loc>https://devslow.github.io/categories/Javaweb/</loc>
-    <lastmod>2024-03-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://devslow.github.io/categories/Tomcat/Javaweb/</loc>
-    <lastmod>2024-03-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://devslow.github.io/categories/jQuery/</loc>
+    <loc>https://devslow.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2024-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -269,7 +262,14 @@
   </url>
   
   <url>
-    <loc>https://devslow.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://devslow.github.io/categories/jQuery/</loc>
+    <lastmod>2024-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://devslow.github.io/categories/Tomcat/Javaweb/</loc>
     <lastmod>2024-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
