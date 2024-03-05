@@ -22,23 +22,60 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"devslow.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Slow&#39;s Blog">
-<meta property="og:url" content="https://devslow.github.io/index.html">
+    <meta name="description" content="JDBC核心技术讲师：宋红康 微博：尚硅谷-宋红康  第1章：JDBC概述1.1 数据的持久化 持久化(persistence)：把数据保存到可掉电式存储设备中以供之后使用。大多数情况下，特别是企业级应用，数据持久化意味着将内存中的数据保存到硬盘上加以”固化”，而持久化的实现过程大多通过各种关系数据库来完成。  持久化的主要应用是将内存中的数据存储在关系型数据库中，当然也可以存储在磁盘文件、XML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="尚硅谷_宋红康_JDBC总结">
+<meta property="og:url" content="https://devslow.github.io/posts/25635500/index.html">
 <meta property="og:site_name" content="Slow&#39;s Blog">
+<meta property="og:description" content="JDBC核心技术讲师：宋红康 微博：尚硅谷-宋红康  第1章：JDBC概述1.1 数据的持久化 持久化(persistence)：把数据保存到可掉电式存储设备中以供之后使用。大多数情况下，特别是企业级应用，数据持久化意味着将内存中的数据保存到硬盘上加以”固化”，而持久化的实现过程大多通过各种关系数据库来完成。  持久化的主要应用是将内存中的数据存储在关系型数据库中，当然也可以存储在磁盘文件、XML">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1566741430592.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555575760234.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555575981203.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1566741692804.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1565969323908.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555576157618.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555576170074.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1566134718955.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1566134781682.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1566135290460.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1566136831283.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555576477107.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1566573842140.png">
+<meta property="og:image" content="https://devslow.github.io/%E5%B0%9A%E7%A1%85%E8%B0%B7_%E5%AE%8B%E7%BA%A2%E5%BA%B7_JDBC.assets/1566569819744.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555580152530.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555579494691.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555579816884.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555580275036.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555580735377.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555580763636.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555580937490.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555580965019.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555581069798.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555586275271.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1566726681515.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1566745811244.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555593464033.png">
+<meta property="og:image" content="https://devslow.github.io/%E5%B0%9A%E7%A1%85%E8%B0%B7_%E5%AE%8B%E7%BA%A2%E5%BA%B7_JDBC.assets/1555593598606.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555595163263.png">
+<meta property="og:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1555595198644.png">
+<meta property="article:published_time" content="2024-03-05T03:44:17.104Z">
+<meta property="article:modified_time" content="2024-03-05T03:45:57.236Z">
 <meta property="article:author" content="Slow">
+<meta property="article:tag" content="JDBC">
+<meta property="article:tag" content="数据库">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/1566741430592.png">
 
 
-<link rel="canonical" href="https://devslow.github.io/">
+<link rel="canonical" href="https://devslow.github.io/posts/25635500/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://devslow.github.io/posts/25635500/","path":"posts/25635500/","title":"尚硅谷_宋红康_JDBC总结"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Slow's Blog</title>
+<title>尚硅谷_宋红康_JDBC总结 | Slow's Blog</title>
   
 
 
@@ -71,7 +108,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Slow's Blog</h1>
+      <p class="site-title">Slow's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">随便写点什么</p>
@@ -125,7 +162,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -138,6 +175,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JDBC%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF"><span class="nav-number">1.</span> <span class="nav-text">JDBC核心技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC1%E7%AB%A0%EF%BC%9AJDBC%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">第1章：JDBC概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 数据的持久化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-Java%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%8A%80%E6%9C%AF"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 Java中的数据存储技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-JDBC%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 JDBC介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-JDBC%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.4 JDBC体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-JDBC%E7%A8%8B%E5%BA%8F%E7%BC%96%E5%86%99%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.5.</span> <span class="nav-text">1.5 JDBC程序编写步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC2%E7%AB%A0%EF%BC%9A%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.2.</span> <span class="nav-text">第2章：获取数据库连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E8%A6%81%E7%B4%A0%E4%B8%80%EF%BC%9ADriver%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 要素一：Driver接口实现类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-Driver%E6%8E%A5%E5%8F%A3%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">2.1.1 Driver接口介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-%E5%8A%A0%E8%BD%BD%E4%B8%8E%E6%B3%A8%E5%86%8CJDBC%E9%A9%B1%E5%8A%A8"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">2.1.2 加载与注册JDBC驱动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E8%A6%81%E7%B4%A0%E4%BA%8C%EF%BC%9AURL"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 要素二：URL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E8%A6%81%E7%B4%A0%E4%B8%89%EF%BC%9A%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 要素三：用户名和密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F%E4%B8%BE%E4%BE%8B"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 数据库连接方式举例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F%E4%B8%80"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">2.4.1 连接方式一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-2-%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F%E4%BA%8C"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">2.4.2 连接方式二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-3-%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F%E4%B8%89"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">2.4.3 连接方式三</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-4-%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F%E5%9B%9B"><span class="nav-number">1.2.4.4.</span> <span class="nav-text">2.4.4 连接方式四</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-5-%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F%E4%BA%94-%E6%9C%80%E7%BB%88%E7%89%88"><span class="nav-number">1.2.4.5.</span> <span class="nav-text">2.4.5 连接方式五(最终版)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC3%E7%AB%A0%EF%BC%9A%E4%BD%BF%E7%94%A8PreparedStatement%E5%AE%9E%E7%8E%B0CRUD%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.</span> <span class="nav-text">第3章：使用PreparedStatement实现CRUD操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E6%93%8D%E4%BD%9C%E5%92%8C%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 操作和访问数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E4%BD%BF%E7%94%A8Statement%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E5%BC%8A%E7%AB%AF"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 使用Statement操作数据表的弊端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-PreparedStatement%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 PreparedStatement的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-PreparedStatement%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">3.3.1 PreparedStatement介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-PreparedStatement-vs-Statement"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">3.3.2 PreparedStatement vs Statement</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-3-Java%E4%B8%8ESQL%E5%AF%B9%E5%BA%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%A1%A8"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">3.3.3 Java与SQL对应数据类型转换表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-4-%E4%BD%BF%E7%94%A8PreparedStatement%E5%AE%9E%E7%8E%B0%E5%A2%9E%E3%80%81%E5%88%A0%E3%80%81%E6%94%B9%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">3.3.4 使用PreparedStatement实现增、删、改操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-5-%E4%BD%BF%E7%94%A8PreparedStatement%E5%AE%9E%E7%8E%B0%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.3.5.</span> <span class="nav-text">3.3.5 使用PreparedStatement实现查询操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-ResultSet%E4%B8%8EResultSetMetaData"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.4 ResultSet与ResultSetMetaData</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-ResultSet"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">3.4.1 ResultSet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-ResultSetMetaData"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">3.4.2 ResultSetMetaData</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E8%B5%84%E6%BA%90%E7%9A%84%E9%87%8A%E6%94%BE"><span class="nav-number">1.3.5.</span> <span class="nav-text">3.5 资源的释放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-JDBC-API%E5%B0%8F%E7%BB%93"><span class="nav-number">1.3.6.</span> <span class="nav-text">3.6 JDBC API小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%A0%E8%8A%82%E7%BB%83%E4%B9%A0"><span class="nav-number">1.4.</span> <span class="nav-text">章节练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC4%E7%AB%A0-%E6%93%8D%E4%BD%9CBLOB%E7%B1%BB%E5%9E%8B%E5%AD%97%E6%AE%B5"><span class="nav-number">1.5.</span> <span class="nav-text">第4章 操作BLOB类型字段</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-MySQL-BLOB%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.5.1.</span> <span class="nav-text">4.1 MySQL BLOB类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E5%90%91%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%AD%E6%8F%92%E5%85%A5%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.5.2.</span> <span class="nav-text">4.2 向数据表中插入大数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%AD%E7%9A%84Blob%E7%B1%BB%E5%9E%8B%E5%AD%97%E6%AE%B5"><span class="nav-number">1.5.3.</span> <span class="nav-text">4.3 修改数据表中的Blob类型字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E4%BB%8E%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%AD%E8%AF%BB%E5%8F%96%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.5.4.</span> <span class="nav-text">4.4 从数据表中读取大数据类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC5%E7%AB%A0-%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5"><span class="nav-number">1.6.</span> <span class="nav-text">第5章 批量插入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8CSQL%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.6.1.</span> <span class="nav-text">5.1 批量执行SQL语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E9%AB%98%E6%95%88%E7%9A%84%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5"><span class="nav-number">1.6.2.</span> <span class="nav-text">5.2 高效的批量插入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-%E5%AE%9E%E7%8E%B0%E5%B1%82%E6%AC%A1%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8Statement"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">5.2.1 实现层次一：使用Statement</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2-%E5%AE%9E%E7%8E%B0%E5%B1%82%E6%AC%A1%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8PreparedStatement"><span class="nav-number">1.6.2.2.</span> <span class="nav-text">5.2.2 实现层次二：使用PreparedStatement</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-3-%E5%AE%9E%E7%8E%B0%E5%B1%82%E6%AC%A1%E4%B8%89"><span class="nav-number">1.6.2.3.</span> <span class="nav-text">5.2.3 实现层次三</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-4-%E5%AE%9E%E7%8E%B0%E5%B1%82%E6%AC%A1%E5%9B%9B"><span class="nav-number">1.6.2.4.</span> <span class="nav-text">5.2.4 实现层次四</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC6%E7%AB%A0%EF%BC%9A-%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1"><span class="nav-number">1.7.</span> <span class="nav-text">第6章： 数据库事务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.7.1.</span> <span class="nav-text">6.1 数据库事务介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-JDBC%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86"><span class="nav-number">1.7.2.</span> <span class="nav-text">6.2 JDBC事务处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-%E4%BA%8B%E5%8A%A1%E7%9A%84ACID%E5%B1%9E%E6%80%A7"><span class="nav-number">1.7.3.</span> <span class="nav-text">6.3 事务的ACID属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-1-%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98"><span class="nav-number">1.7.3.1.</span> <span class="nav-text">6.3.1 数据库的并发问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-2-%E5%9B%9B%E7%A7%8D%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="nav-number">1.7.3.2.</span> <span class="nav-text">6.3.2 四种隔离级别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-3-%E5%9C%A8MySql%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="nav-number">1.7.3.3.</span> <span class="nav-text">6.3.3 在MySql中设置隔离级别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC7%E7%AB%A0%EF%BC%9ADAO%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="nav-number">1.8.</span> <span class="nav-text">第7章：DAO及相关实现类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90BaseDAO-java%E3%80%91"><span class="nav-number">1.8.1.</span> <span class="nav-text">【BaseDAO.java】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90BookDAO-java%E3%80%91"><span class="nav-number">1.8.2.</span> <span class="nav-text">【BookDAO.java】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90UserDAO-java%E3%80%91"><span class="nav-number">1.8.3.</span> <span class="nav-text">【UserDAO.java】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90BookDaoImpl-java%E3%80%91"><span class="nav-number">1.8.4.</span> <span class="nav-text">【BookDaoImpl.java】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90UserDaoImpl-java%E3%80%91"><span class="nav-number">1.8.5.</span> <span class="nav-text">【UserDaoImpl.java】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90Book-java%E3%80%91"><span class="nav-number">1.8.6.</span> <span class="nav-text">【Book.java】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90Page-java%E3%80%91"><span class="nav-number">1.8.7.</span> <span class="nav-text">【Page.java】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90User-java%E3%80%91"><span class="nav-number">1.8.8.</span> <span class="nav-text">【User.java】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC8%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="nav-number">1.9.</span> <span class="nav-text">第8章：数据库连接池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-JDBC%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7"><span class="nav-number">1.9.1.</span> <span class="nav-text">8.1 JDBC数据库连接池的必要性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0%E6%8A%80%E6%9C%AF"><span class="nav-number">1.9.2.</span> <span class="nav-text">8.2 数据库连接池技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-%E5%A4%9A%E7%A7%8D%E5%BC%80%E6%BA%90%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="nav-number">1.9.3.</span> <span class="nav-text">8.3 多种开源的数据库连接池</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-1-C3P0%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="nav-number">1.9.3.1.</span> <span class="nav-text">8.3.1 C3P0数据库连接池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-2-DBCP%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="nav-number">1.9.3.2.</span> <span class="nav-text">8.3.2 DBCP数据库连接池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-3-Druid%EF%BC%88%E5%BE%B7%E9%B2%81%E4%BC%8A%EF%BC%89%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="nav-number">1.9.3.3.</span> <span class="nav-text">8.3.3 Druid（德鲁伊）数据库连接池</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC9%E7%AB%A0%EF%BC%9AApache-DBUtils%E5%AE%9E%E7%8E%B0CRUD%E6%93%8D%E4%BD%9C"><span class="nav-number">1.10.</span> <span class="nav-text">第9章：Apache-DBUtils实现CRUD操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-Apache-DBUtils%E7%AE%80%E4%BB%8B"><span class="nav-number">1.10.1.</span> <span class="nav-text">9.1 Apache-DBUtils简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-%E4%B8%BB%E8%A6%81API%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.10.2.</span> <span class="nav-text">9.2 主要API的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-1-DbUtils"><span class="nav-number">1.10.2.1.</span> <span class="nav-text">9.2.1 DbUtils</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-2-QueryRunner%E7%B1%BB"><span class="nav-number">1.10.2.2.</span> <span class="nav-text">9.2.2 QueryRunner类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-3-ResultSetHandler%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="nav-number">1.10.2.3.</span> <span class="nav-text">9.2.3 ResultSetHandler接口及实现类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC%E6%80%BB%E7%BB%93"><span class="nav-number">1.11.</span> <span class="nav-text">JDBC总结</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -202,16 +240,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://devslow.github.io/posts/25635500/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -225,13 +264,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Slow's Blog">
+      <meta itemprop="name" content="尚硅谷_宋红康_JDBC总结 | Slow's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/25635500/" class="post-title-link" itemprop="url">尚硅谷_宋红康_JDBC总结</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          尚硅谷_宋红康_JDBC总结
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -288,8 +327,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="JDBC核心技术"><a href="#JDBC核心技术" class="headerlink" title="JDBC核心技术"></a>JDBC核心技术</h1><p>讲师：宋红康</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="JDBC核心技术"><a href="#JDBC核心技术" class="headerlink" title="JDBC核心技术"></a>JDBC核心技术</h1><p>讲师：宋红康</p>
 <p>微博：尚硅谷-宋红康</p>
 <hr>
 <h2 id="第1章：JDBC概述"><a href="#第1章：JDBC概述" class="headerlink" title="第1章：JDBC概述"></a>第1章：JDBC概述</h2><h3 id="1-1-数据的持久化"><a href="#1-1-数据的持久化" class="headerlink" title="1.1 数据的持久化"></a>1.1 数据的持久化</h3><ul>
@@ -1251,7 +1289,6 @@
 <h2 id="JDBC总结"><a href="#JDBC总结" class="headerlink" title="JDBC总结"></a>JDBC总结</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">总结</span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testUpdateWithTx</span><span class="params">()</span> &#123;</span><br><span class="line">		</span><br><span class="line">	<span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		<span class="comment">//1.获取连接的操作（</span></span><br><span class="line">		<span class="comment">//① 手写的连接：JDBCUtils.getConnection();</span></span><br><span class="line">		<span class="comment">//② 使用数据库连接池：C3P0;DBCP;Druid</span></span><br><span class="line">		<span class="comment">//2.对数据表进行一系列CRUD操作</span></span><br><span class="line">		<span class="comment">//① 使用PreparedStatement实现通用的增删改、查询操作（version 1.0 \ version 2.0)</span></span><br><span class="line"><span class="comment">//version2.0的增删改public void update(Connection conn,String sql,Object ... args)&#123;&#125;</span></span><br><span class="line"><span class="comment">//version2.0的查询 public &lt;T&gt; T getInstance(Connection conn,Class&lt;T&gt; clazz,String sql,Object ... args)&#123;&#125;</span></span><br><span class="line">		<span class="comment">//② 使用dbutils提供的jar包中提供的QueryRunner类</span></span><br><span class="line">			</span><br><span class="line">		<span class="comment">//提交数据</span></span><br><span class="line">		conn.commit();</span><br><span class="line">			</span><br><span class="line">	</span><br><span class="line">	&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">//回滚数据</span></span><br><span class="line">			conn.rollback();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e1) &#123;</span><br><span class="line">			e1.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">			</span><br><span class="line">	&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">		<span class="comment">//3.关闭连接等操作</span></span><br><span class="line">		<span class="comment">//① JDBCUtils.closeResource();</span></span><br><span class="line">		<span class="comment">//② 使用dbutils提供的jar包中提供的DbUtils类提供了关闭的相关操作</span></span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-      
     </div>
 
     
@@ -1259,416 +1296,57 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechat.jpg" alt="Slow 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Slow 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
 </div>
 
+          
 
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://devslow.github.io/posts/4281705595/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/devSlow/ImgMap/master/img/avatar.jpg">
-      <meta itemprop="name" content="Slow">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/4281705595/" class="post-title-link" itemprop="url">Linux操作系统管理及应用</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-03-04 22:29:23 / 修改时间：22:39:59" itemprop="dateCreated datePublished" datetime="2024-03-04T22:29:23+08:00">2024-03-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>443</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Slow
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://devslow.github.io/posts/25635500/" title="尚硅谷_宋红康_JDBC总结">https://devslow.github.io/posts/25635500/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
-        </div>
-      </header>
+          <div class="post-tags">
+              <a href="/tags/JDBC/" rel="tag"><i class="fa fa-tag"></i> JDBC</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag"><i class="fa fa-tag"></i> 数据库</a>
+          </div>
 
-    
-      <i class="fa fa-thumb-tack"></i>
-      <font color=7D26CD>置顶</font>
-      <span class="post-meta-divider">|</span>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Linux系统配置"><a href="#Linux系统配置" class="headerlink" title="Linux系统配置"></a>Linux系统配置</h1><h2 id="命令行终端"><a href="#命令行终端" class="headerlink" title="命令行终端"></a>命令行终端</h2><p>使用Ctrl+Alt+Del打开</p>
-<h2 id="sudo-和su-命令"><a href="#sudo-和su-命令" class="headerlink" title="sudo 和su -命令"></a>sudo 和su -命令</h2><p>切换用户信息命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su -</span><br></pre></td></tr></table></figure>
-
-<p>切换到root会要求输入密码(默认隐藏)</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/4281705595/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://devslow.github.io/posts/1123518211/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/devSlow/ImgMap/master/img/avatar.jpg">
-      <meta itemprop="name" content="Slow">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/1123518211/" class="post-title-link" itemprop="url">Javaweb06-Servlet02</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-02-27 17:37:01" itemprop="dateCreated datePublished" datetime="2024-02-27T17:37:01+08:00">2024-02-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-02-28 09:12:28" itemprop="dateModified" datetime="2024-02-28T09:12:28+08:00">2024-02-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Servlet/" itemprop="url" rel="index"><span itemprop="name">Servlet</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Servlet/Javaweb/" itemprop="url" rel="index"><span itemprop="name">Javaweb</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Servlet/Javaweb/Tomcat/" itemprop="url" rel="index"><span itemprop="name">Tomcat</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>6 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-      <i class="fa fa-thumb-tack"></i>
-      <font color=7D26CD>置顶</font>
-      <span class="post-meta-divider">|</span>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="HttpServletRequest类"><a href="#HttpServletRequest类" class="headerlink" title="HttpServletRequest类"></a>HttpServletRequest类</h1><h2 id="a）HttpServletRequest类有什么作用"><a href="#a）HttpServletRequest类有什么作用" class="headerlink" title="a）HttpServletRequest类有什么作用"></a>a）HttpServletRequest类有什么作用</h2><p>每次只要有请求进入 Tomcat 服务器，Tomcat 服务器就会把请求过来的 HTTP 协议信息解析好封装到 Request 对象中。</p>
-<p>然后传递到 service 方法（doGet 和 doPost）中给我们使用。我们可以通过 HttpServletRequest 对象，获取到所有请求的信息。 </p>
-<h2 id="b）HttpServletRequest类的常用方法"><a href="#b）HttpServletRequest类的常用方法" class="headerlink" title="b）HttpServletRequest类的常用方法"></a>b）HttpServletRequest类的常用方法</h2><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>getRequestURI()</td>
-<td>获取请求的资源路径</td>
-</tr>
-<tr>
-<td>getRequestURL()</td>
-<td>获取请求的统一资源定位符（绝对路径）</td>
-</tr>
-<tr>
-<td>getRemoteHost()</td>
-<td>获取客户端的 ip 地址</td>
-</tr>
-<tr>
-<td>getHeader()</td>
-<td>获取请求头</td>
-</tr>
-<tr>
-<td>getParameter()</td>
-<td>获取请求的参数</td>
-</tr>
-<tr>
-<td>getParameterValues()</td>
-<td>获取请求的参数（多个值的时候使用）</td>
-</tr>
-<tr>
-<td>getMethod().</td>
-<td>获取请求的方式 GET 或 POST</td>
-</tr>
-<tr>
-<td>setAttribute(key, value)</td>
-<td>设置域数据</td>
-</tr>
-<tr>
-<td>getAttribute(key)</td>
-<td>获取域数据</td>
-</tr>
-<tr>
-<td>getRequestDispatcher()</td>
-<td>获取请求转发对象</td>
-</tr>
-</tbody></table>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/1123518211/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/4281705595/" rel="prev" title="Linux操作系统管理及应用">
+                  <i class="fa fa-angle-left"></i> Linux操作系统管理及应用
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://devslow.github.io/posts/3690911417/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/devSlow/ImgMap/master/img/avatar.jpg">
-      <meta itemprop="name" content="Slow">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/3690911417/" class="post-title-link" itemprop="url">Javaweb06-Servlet01</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-02-26 20:51:11 / 修改时间：20:55:01" itemprop="dateCreated datePublished" datetime="2024-02-26T20:51:11+08:00">2024-02-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Servlet/" itemprop="url" rel="index"><span itemprop="name">Servlet</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Servlet/Javaweb/" itemprop="url" rel="index"><span itemprop="name">Javaweb</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Servlet/Javaweb/Tomcat/" itemprop="url" rel="index"><span itemprop="name">Tomcat</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>10 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-      <i class="fa fa-thumb-tack"></i>
-      <font color=7D26CD>置顶</font>
-      <span class="post-meta-divider">|</span>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Servlet技术"><a href="#Servlet技术" class="headerlink" title="Servlet技术"></a>Servlet技术</h1><h2 id="a）什么是Servlet"><a href="#a）什么是Servlet" class="headerlink" title="a）什么是Servlet"></a>a）什么是Servlet</h2><ol>
-<li><p>Servlet 是 JavaEE 规范之一。规范就是接口</p>
-</li>
-<li><p>Servlet 就 JavaWeb 三大组件之一。三大组件分别是：Servlet 程序、Filter 过滤器、Listener 监听器。</p>
-</li>
-<li><p>Servlet 是运行在服务器上的一个 java 小程序，它可以接收客户端发送过来的请求，并响应数据给客户端。</p>
-</li>
-</ol>
-<h2 id="b）手动实现Servlet程序"><a href="#b）手动实现Servlet程序" class="headerlink" title="b）手动实现Servlet程序"></a>b）手动实现Servlet程序</h2><p>1、编写一个类去实现 Servlet 接口</p>
-<p>2、实现 service 方法，处理请求，并响应数据</p>
-<p>3、到 web.xml 中去配置 servlet 程序的访问地址</p>
-<p>Servlet程序的示例代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloServlet</span> <span class="keyword">implements</span> <span class="title class_">Servlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(ServletConfig servletConfig)</span> <span class="keyword">throws</span> ServletException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> ServletConfig <span class="title function_">getServletConfig</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//主动实现service方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">service</span><span class="params">(ServletRequest servletRequest, ServletResponse servletResponse)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;helloServlet被访问！&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/3690911417/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+            <div class="post-nav-item">
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          </div>
     </footer>
   </article>
 </div>
@@ -1676,243 +1354,9 @@
 
 
 
-    
 
 
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://devslow.github.io/posts/221394835/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/devSlow/ImgMap/master/img/avatar.jpg">
-      <meta itemprop="name" content="Slow">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/221394835/" class="post-title-link" itemprop="url">Javaweb05-XML & Tomcat</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-02-24 18:38:11" itemprop="dateCreated datePublished" datetime="2024-02-24T18:38:11+08:00">2024-02-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-02-28 09:10:59" itemprop="dateModified" datetime="2024-02-28T09:10:59+08:00">2024-02-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Tomcat/" itemprop="url" rel="index"><span itemprop="name">Tomcat</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Tomcat/Javaweb/" itemprop="url" rel="index"><span itemprop="name">Javaweb</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>9 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-      <i class="fa fa-thumb-tack"></i>
-      <font color=7D26CD>置顶</font>
-      <span class="post-meta-divider">|</span>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="XML简介"><a href="#XML简介" class="headerlink" title="XML简介"></a>XML简介</h1><h2 id="什么是xml？"><a href="#什么是xml？" class="headerlink" title="什么是xml？"></a>什么是xml？</h2><p>​	xml是可扩展的标记性语言</p>
-<h2 id="xml的作用？"><a href="#xml的作用？" class="headerlink" title="xml的作用？"></a>xml的作用？</h2><p>​	xml的主要作用有：</p>
-<p>​	1.用来保存数据，而且这些数据具有自我描述性</p>
-<p>​	2.它还可以做为项目或者模块的配置文件 </p>
-<p>​	3.还可以做为网络传输数据的格式（现在 JSON 为主）</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/221394835/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://devslow.github.io/posts/3011710768/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/devSlow/ImgMap/master/img/avatar.jpg">
-      <meta itemprop="name" content="Slow">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/3011710768/" class="post-title-link" itemprop="url">书城项目_01表单验证</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-02-06 16:06:34 / 修改时间：16:11:13" itemprop="dateCreated datePublished" datetime="2024-02-06T16:06:34+08:00">2024-02-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Javaweb/" itemprop="url" rel="index"><span itemprop="name">Javaweb</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Javaweb/%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">项目</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>324</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-      <i class="fa fa-thumb-tack"></i>
-      <font color=7D26CD>置顶</font>
-      <span class="post-meta-divider">|</span>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="书城项目第一阶段，表单验证"><a href="#书城项目第一阶段，表单验证" class="headerlink" title="书城项目第一阶段，表单验证"></a>书城项目第一阶段，表单验证</h1><h2 id="验证用户名"><a href="#验证用户名" class="headerlink" title="验证用户名"></a>验证用户名</h2><p>​	必须由字母，数字，下划线组成，长度为5-12位</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#sub_btn&quot;</span>).<span class="title function_">click</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// // 验证用户名：必须由字母，数字下划线组成，并且长度为5到12位</span></span><br><span class="line">    <span class="comment">// //1 获取用户名输入框里的内容</span></span><br><span class="line">    <span class="keyword">var</span> usernameText = $(<span class="string">&quot;#username&quot;</span>).<span class="title function_">val</span>();</span><br><span class="line">    <span class="comment">// //2 创建正则表达式对象</span></span><br><span class="line">    <span class="keyword">var</span> usernamePatt = <span class="regexp">/^\w&#123;5,12&#125;$/</span>;</span><br><span class="line">    <span class="comment">// //3 使用test方法验证</span></span><br><span class="line">    <span class="keyword">if</span> (!usernamePatt.<span class="title function_">test</span>(usernameText)) &#123;</span><br><span class="line">        <span class="comment">//  //4 提示用户结果</span></span><br><span class="line">        $(<span class="string">&quot;span.errorMsg&quot;</span>).<span class="title function_">text</span>(<span class="string">&quot;用户名不合法！&quot;</span>)</span><br><span class="line">        <span class="comment">//  $(&quot;span.errorMsg&quot;).text(&quot;用户名不合法！&quot;);</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/3011710768/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81OTM4NS8zNTg0Nw=="></div>
 </div>
   </main>
 
@@ -2017,7 +1461,7 @@
 
 
   <script src="https://unpkg.com/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":false,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://devslow.github.io/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://devslow.github.io/posts/25635500/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <script src="/js/third-party/comments/livere.js"></script>
 <div class="moon-menu">
