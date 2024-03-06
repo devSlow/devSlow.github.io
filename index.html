@@ -242,7 +242,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-03-06 22:17:31 / 修改时间：22:24:41" itemprop="dateCreated datePublished" datetime="2024-03-06T22:17:31+08:00">2024-03-06</time>
+      <time title="创建时间：2024-03-06 22:17:31 / 修改时间：22:49:32" itemprop="dateCreated datePublished" datetime="2024-03-06T22:17:31+08:00">2024-03-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -265,7 +265,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>889</span>
+      <span>890</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -294,70 +294,14 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su -</span><br></pre></td></tr></table></figure>
 
 <p>切换到root会要求输入密码(默认隐藏)</p>
-<h2 id="设置主机名"><a href="#设置主机名" class="headerlink" title="设置主机名"></a>设置主机名</h2><h3 id="使用nmtui命令修改"><a href="#使用nmtui命令修改" class="headerlink" title="使用nmtui命令修改"></a>使用nmtui命令修改</h3><p>此操作为图形化界面</p>
-<h3 id="使用hostnamectl工具进行修改"><a href="#使用hostnamectl工具进行修改" class="headerlink" title="使用hostnamectl工具进行修改"></a>使用hostnamectl工具进行修改</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl	//查看主机名</span><br><span class="line">hostnamectl status //查看主机名 </span><br><span class="line">hostnamectl set-hostname newhostname//设置新主机名</span><br><span class="line"><span class="built_in">exit</span>//退出并重新登录</span><br></pre></td></tr></table></figure>
-
-<h2 id="systemctl服务管理命令"><a href="#systemctl服务管理命令" class="headerlink" title="systemctl服务管理命令"></a>systemctl服务管理命令</h2><p>这部分看书p22页面</p>
-<h2 id="设置ip地址"><a href="#设置ip地址" class="headerlink" title="设置ip地址"></a>设置ip地址</h2><p>设置完ip地址之后，需要使用 systemctl restart NetworkManager命令进行重启，使得修改的信息生效</p>
-<h2 id="课后作业"><a href="#课后作业" class="headerlink" title="课后作业"></a>课后作业</h2><p>p26页</p>
-<h1 id="文件和目录的管理"><a href="#文件和目录的管理" class="headerlink" title="文件和目录的管理"></a>文件和目录的管理</h1><h2 id="远程连接功能"><a href="#远程连接功能" class="headerlink" title="远程连接功能"></a>远程连接功能</h2><h3 id="安装openssh-server"><a href="#安装openssh-server" class="headerlink" title="安装openssh-server"></a>安装openssh-server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install  openssh-server</span><br></pre></td></tr></table></figure>
-
-<h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop ufw</span><br><span class="line">systemctl <span class="built_in">disable</span> ufw</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看IP地址"><a href="#查看IP地址" class="headerlink" title="查看IP地址"></a>查看IP地址</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
-
-<h2 id="了解Linux命令"><a href="#了解Linux命令" class="headerlink" title="了解Linux命令"></a>了解Linux命令</h2><h3 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a>pwd命令</h3><p>​	查看当前所处的工作路径</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a>cd命令</h3><p>​	切换工作路径</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd</span><br></pre></td></tr></table></figure>
-
-<h3 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h3><p>​	显示目录中的文件信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ls-a：查看所有文件及其目录（包括隐藏）</span><br><span class="line">ls-l：显示文件属性，大小等文件信息</span><br><span class="line">ls-R：</span><br><span class="line">ls-d：查看指定目录的信息</span><br></pre></td></tr></table></figure>
-
-<h3 id="echo命令"><a href="#echo命令" class="headerlink" title="echo命令"></a>echo命令</h3><p>​	在屏幕上输出信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> -n <span class="string">&quot;hello&quot;</span>：不换行输出</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">&quot;hello&quot;</span>：解析转义字符</span><br></pre></td></tr></table></figure>
-
-<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><h3 id="目录操作类命令"><a href="#目录操作类命令" class="headerlink" title="目录操作类命令"></a>目录操作类命令</h3><h4 id="mkdir命令"><a href="#mkdir命令" class="headerlink" title="mkdir命令"></a>mkdir命令</h4><p>​	用于创建目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> <span class="built_in">test</span>：创建<span class="built_in">test</span>文件夹</span><br><span class="line"><span class="built_in">mkdir</span> -p AA/BB/CC：创建AA/BB/CC目录</span><br></pre></td></tr></table></figure>
-
-<h4 id="rm命令"><a href="#rm命令" class="headerlink" title="rm命令"></a>rm命令</h4><p>​	用于删除文件或目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -i：提示是否删除</span><br><span class="line"><span class="built_in">rm</span> -r：用于强制删除</span><br><span class="line"><span class="built_in">rm</span> -f：用于强制删除</span><br></pre></td></tr></table></figure>
-
-<p>例如：强制删除test目录的命令是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf <span class="built_in">test</span>（慎用）</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建空白文件"><a href="#创建空白文件" class="headerlink" title="创建空白文件"></a>创建空白文件</h3><h4 id="touch命令"><a href="#touch命令" class="headerlink" title="touch命令"></a>touch命令</h4><p>​	用于创建空白文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> -a //修改文件的Access时间，会导致Ctime时间变化</span><br><span class="line"><span class="built_in">touch</span> -m //修改文件内容的Modification时间，会导致Ctime时间变化</span><br><span class="line"><span class="built_in">touch</span> -t //这顶时间戳</span><br><span class="line"><span class="built_in">touch</span> -r //时间其他文件的时间戳</span><br></pre></td></tr></table></figure>
-
-<h3 id="复制文件或目录"><a href="#复制文件或目录" class="headerlink" title="复制文件或目录"></a>复制文件或目录</h3><h4 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a>cp命令</h4><p>​	用于复制文件或目录</p>
-<p>如果目标是目录，则把源文件代码复制到该目录中</p>
-<p>如果目标目标不存在，执行正常的复制操作</p>
-<p>如果目标是同名文件，则会进行覆盖</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> 源文件|源目录 目标文件|目标目录</span><br><span class="line">// 创建文件</span><br><span class="line"><span class="built_in">touch</span> 1.txt;</span><br><span class="line"><span class="built_in">mkdir</span> a;</span><br><span class="line"><span class="built_in">cp</span> -r 1.txt  a</span><br></pre></td></tr></table></figure>
-
-<h4 id="nv命令"><a href="#nv命令" class="headerlink" title="nv命令"></a>nv命令</h4><p>​	用于重命名或者移动文件&#x2F;目录</p>
-<p>如果源文件与目标文件在同一目录下，则执行改名操作</p>
-<p>如果目标是目录，则把源文件|源目录移动到该目录中</p>
-<p>如果目标不存在，则进行正常的复制操作</p>
-<p>如果目标是同名文件，则会覆盖</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> 源文件|源目录 目标文件|目标目录</span><br><span class="line"><span class="built_in">mv</span> 1.txt 3.txt</span><br></pre></td></tr></table></figure>
-
-<h3 id="文件查看类命令"><a href="#文件查看类命令" class="headerlink" title="文件查看类命令"></a>文件查看类命令</h3><h4 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h4><p>​	用于查看一个文件的内容，并显示在屏幕上</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> 文件名</span><br></pre></td></tr></table></figure>
-
-<h4 id="more-less命令"><a href="#more-less命令" class="headerlink" title="more&#x2F;less命令"></a>more&#x2F;less命令</h4><p>​	用于查看内容较多的文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">more 文件名</span><br><span class="line">less 文件名</span><br></pre></td></tr></table></figure>
-
-<h4 id="head-tail-命令"><a href="#head-tail-命令" class="headerlink" title="head&#x2F;tail 命令"></a>head&#x2F;tail 命令</h4><p>​	用于查看内容的前十行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">head</span> 文件名</span><br><span class="line"><span class="built_in">tail</span> 文件名</span><br></pre></td></tr></table></figure>
-
-<h3 id="文件归档命令"><a href="#文件归档命令" class="headerlink" title="文件归档命令"></a>文件归档命令</h3><h4 id="gzip-gunzip命令"><a href="#gzip-gunzip命令" class="headerlink" title="gzip&#x2F;gunzip命令"></a>gzip&#x2F;gunzip命令</h4><p>​	用于压缩&#x2F;解压缩文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gzip/gunzip [参数] 文件名</span><br></pre></td></tr></table></figure>
-
-<h3 id="文件查找命令"><a href="#文件查找命令" class="headerlink" title="文件查找命令"></a>文件查找命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">grep[参数选项] 查找字符串 文件名</span><br><span class="line">	-c:统计包含<span class="string">&quot;查找字符串&quot;</span>的行数</span><br><span class="line">	-n:输出包含<span class="string">&quot;查找字符串&quot;</span>的行号和此行内容</span><br><span class="line">	-v:输出没有包含<span class="string">&quot;查找字符串&quot;</span>的行内容</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/25635500/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

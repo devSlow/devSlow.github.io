@@ -8,6 +8,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo su -</span><br></pre></td></tr></table></figure>
 
 <p>切换到root会要求输入密码(默认隐藏)</p>
+<span id="more"></span>
 <h2 id="设置主机名"><a href="#设置主机名" class="headerlink" title="设置主机名"></a>设置主机名</h2><h3 id="使用nmtui命令修改"><a href="#使用nmtui命令修改" class="headerlink" title="使用nmtui命令修改"></a>使用nmtui命令修改</h3><p>此操作为图形化界面</p>
 <h3 id="使用hostnamectl工具进行修改"><a href="#使用hostnamectl工具进行修改" class="headerlink" title="使用hostnamectl工具进行修改"></a>使用hostnamectl工具进行修改</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hostnamectl	//查看主机名</span><br><span class="line">hostnamectl status //查看主机名 </span><br><span class="line">hostnamectl set-hostname newhostname//设置新主机名</span><br><span class="line"><span class="built_in">exit</span>//退出并重新登录</span><br></pre></td></tr></table></figure>
 
