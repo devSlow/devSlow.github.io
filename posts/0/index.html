@@ -22,28 +22,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"devslow.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Linux系统配置命令行终端使用Ctrl+Alt+Del打开 sudo 和su -命令切换用户信息命令 1sudo su -  切换到root会要求输入密码(默认隐藏)">
+    <meta name="description" content="Linux系统配置命令行终端使用Ctrl+Alt+Del打开 sudo 和su -命令切换用户信息命令 1sudo su -  切换到root会要求输入密码(默认隐藏) 设置主机名使用nmtui命令修改此操作为图形化界面 使用hostnamectl工具进行修改1234hostnamectl	&#x2F;&#x2F;查看主机名hostnamectl status &#x2F;&#x2F;查看主机名 hostnamectl set-host">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux操作系统管理及应用">
-<meta property="og:url" content="https://devslow.github.io/posts/4281705595/index.html">
+<meta property="og:title" content="Slow&#39;s Blog">
+<meta property="og:url" content="https://devslow.github.io/posts/0/index.html">
 <meta property="og:site_name" content="Slow&#39;s Blog">
-<meta property="og:description" content="Linux系统配置命令行终端使用Ctrl+Alt+Del打开 sudo 和su -命令切换用户信息命令 1sudo su -  切换到root会要求输入密码(默认隐藏)">
+<meta property="og:description" content="Linux系统配置命令行终端使用Ctrl+Alt+Del打开 sudo 和su -命令切换用户信息命令 1sudo su -  切换到root会要求输入密码(默认隐藏) 设置主机名使用nmtui命令修改此操作为图形化界面 使用hostnamectl工具进行修改1234hostnamectl	&#x2F;&#x2F;查看主机名hostnamectl status &#x2F;&#x2F;查看主机名 hostnamectl set-host">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-03-04T14:29:23.715Z">
-<meta property="article:modified_time" content="2024-03-04T14:39:59.286Z">
+<meta property="article:published_time" content="2024-03-06T14:17:31.904Z">
+<meta property="article:modified_time" content="2024-03-06T14:17:08.369Z">
 <meta property="article:author" content="Slow">
-<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://devslow.github.io/posts/4281705595/">
+<link rel="canonical" href="https://devslow.github.io/posts/0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://devslow.github.io/posts/4281705595/","path":"posts/4281705595/","title":"Linux操作系统管理及应用"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://devslow.github.io/posts/0/","path":"posts/0/","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Linux操作系统管理及应用 | Slow's Blog</title>
+<title> | Slow's Blog</title>
   
 
 
@@ -143,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">Linux系统配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BB%88%E7%AB%AF"><span class="nav-number">1.1.</span> <span class="nav-text">命令行终端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sudo-%E5%92%8Csu-%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.</span> <span class="nav-text">sudo 和su -命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="nav-number">1.3.</span> <span class="nav-text">设置主机名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8nmtui%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9"><span class="nav-number">1.3.1.</span> <span class="nav-text">使用nmtui命令修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8hostnamectl%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9"><span class="nav-number">1.3.2.</span> <span class="nav-text">使用hostnamectl工具进行修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#systemctl%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">1.4.</span> <span class="nav-text">systemctl服务管理命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEip%E5%9C%B0%E5%9D%80"><span class="nav-number">1.5.</span> <span class="nav-text">设置ip地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="nav-number">1.6.</span> <span class="nav-text">课后作业</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E7%9A%84%E7%AE%A1%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">文件和目录的管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%8A%9F%E8%83%BD"><span class="nav-number">2.1.</span> <span class="nav-text">远程连接功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85openssh-server"><span class="nav-number">2.1.1.</span> <span class="nav-text">安装openssh-server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-number">2.1.2.</span> <span class="nav-text">关闭防火墙</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8BIP%E5%9C%B0%E5%9D%80"><span class="nav-number">2.2.</span> <span class="nav-text">查看IP地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3Linux%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.</span> <span class="nav-text">了解Linux命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pwd%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.1.</span> <span class="nav-text">pwd命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.2.</span> <span class="nav-text">cd命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ls-%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.3.</span> <span class="nav-text">ls 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#echo%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.4.</span> <span class="nav-text">echo命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.</span> <span class="nav-text">基本命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E7%B1%BB%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.1.</span> <span class="nav-text">目录操作类命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mkdir%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.1.1.</span> <span class="nav-text">mkdir命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.1.2.</span> <span class="nav-text">rm命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%A9%BA%E7%99%BD%E6%96%87%E4%BB%B6"><span class="nav-number">2.4.2.</span> <span class="nav-text">创建空白文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#touch%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.2.1.</span> <span class="nav-text">touch命令</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">Linux系统配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BB%88%E7%AB%AF"><span class="nav-number">1.1.</span> <span class="nav-text">命令行终端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sudo-%E5%92%8Csu-%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.</span> <span class="nav-text">sudo 和su -命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="nav-number">1.3.</span> <span class="nav-text">设置主机名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8nmtui%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9"><span class="nav-number">1.3.1.</span> <span class="nav-text">使用nmtui命令修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8hostnamectl%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9"><span class="nav-number">1.3.2.</span> <span class="nav-text">使用hostnamectl工具进行修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#systemctl%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">1.4.</span> <span class="nav-text">systemctl服务管理命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEip%E5%9C%B0%E5%9D%80"><span class="nav-number">1.5.</span> <span class="nav-text">设置ip地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="nav-number">1.6.</span> <span class="nav-text">课后作业</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E7%9A%84%E7%AE%A1%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">文件和目录的管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%8A%9F%E8%83%BD"><span class="nav-number">2.1.</span> <span class="nav-text">远程连接功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85openssh-server"><span class="nav-number">2.1.1.</span> <span class="nav-text">安装openssh-server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-number">2.1.2.</span> <span class="nav-text">关闭防火墙</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8BIP%E5%9C%B0%E5%9D%80"><span class="nav-number">2.2.</span> <span class="nav-text">查看IP地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3Linux%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.</span> <span class="nav-text">了解Linux命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pwd%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.1.</span> <span class="nav-text">pwd命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.2.</span> <span class="nav-text">cd命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ls-%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.3.</span> <span class="nav-text">ls 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#echo%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.4.</span> <span class="nav-text">echo命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.</span> <span class="nav-text">基本命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E7%B1%BB%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.1.</span> <span class="nav-text">目录操作类命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mkdir%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.1.1.</span> <span class="nav-text">mkdir命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.1.2.</span> <span class="nav-text">rm命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%A9%BA%E7%99%BD%E6%96%87%E4%BB%B6"><span class="nav-number">2.4.2.</span> <span class="nav-text">创建空白文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#touch%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.2.1.</span> <span class="nav-text">touch命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95"><span class="nav-number">2.4.3.</span> <span class="nav-text">复制文件或目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cp%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.3.1.</span> <span class="nav-text">cp命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nv%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.3.2.</span> <span class="nav-text">nv命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%9F%A5%E7%9C%8B%E7%B1%BB%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.4.</span> <span class="nav-text">文件查看类命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cat%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.4.1.</span> <span class="nav-text">cat命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#more-less%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.4.2.</span> <span class="nav-text">more&#x2F;less命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#head-tail-%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.4.3.</span> <span class="nav-text">head&#x2F;tail 命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%BD%92%E6%A1%A3%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.5.</span> <span class="nav-text">文件归档命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#gzip-gunzip%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.5.1.</span> <span class="nav-text">gzip&#x2F;gunzip命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.6.</span> <span class="nav-text">文件查找命令</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -164,12 +163,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -219,7 +218,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://devslow.github.io/posts/4281705595/">
+    <link itemprop="mainEntityOfPage" href="https://devslow.github.io/posts/0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://raw.githubusercontent.com/devSlow/ImgMap/master/img/avatar.jpg">
@@ -232,12 +231,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Linux操作系统管理及应用 | Slow's Blog">
+      <meta itemprop="name" content=" | Slow's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Linux操作系统管理及应用
+          
         </h1>
 
         <div class="post-meta-container">
@@ -249,16 +248,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-03-04 22:29:23 / 修改时间：22:39:59" itemprop="dateCreated datePublished" datetime="2024-03-04T22:29:23+08:00">2024-03-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-        </span>
+      <time title="创建时间：2024-03-06 22:17:31 / 修改时间：22:17:08" itemprop="dateCreated datePublished" datetime="2024-03-06T22:17:31+08:00">2024-03-06</time>
     </span>
 
   
@@ -268,24 +258,20 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>443</span>
+      <span>889</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
         </div>
       </header>
 
-    
-      <i class="fa fa-thumb-tack"></i>
-      <font color=7D26CD>置顶</font>
-      <span class="post-meta-divider">|</span>
     
 
     
@@ -296,8 +282,6 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su -</span><br></pre></td></tr></table></figure>
 
 <p>切换到root会要求输入密码(默认隐藏)</p>
-<span id="more"></span>
-
 <h2 id="设置主机名"><a href="#设置主机名" class="headerlink" title="设置主机名"></a>设置主机名</h2><h3 id="使用nmtui命令修改"><a href="#使用nmtui命令修改" class="headerlink" title="使用nmtui命令修改"></a>使用nmtui命令修改</h3><p>此操作为图形化界面</p>
 <h3 id="使用hostnamectl工具进行修改"><a href="#使用hostnamectl工具进行修改" class="headerlink" title="使用hostnamectl工具进行修改"></a>使用hostnamectl工具进行修改</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl	//查看主机名</span><br><span class="line">hostnamectl status //查看主机名 </span><br><span class="line">hostnamectl set-hostname newhostname//设置新主机名</span><br><span class="line"><span class="built_in">exit</span>//退出并重新登录</span><br></pre></td></tr></table></figure>
 
@@ -332,6 +316,35 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf <span class="built_in">test</span>（慎用）</span><br></pre></td></tr></table></figure>
 
 <h3 id="创建空白文件"><a href="#创建空白文件" class="headerlink" title="创建空白文件"></a>创建空白文件</h3><h4 id="touch命令"><a href="#touch命令" class="headerlink" title="touch命令"></a>touch命令</h4><p>​	用于创建空白文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> -a //修改文件的Access时间，会导致Ctime时间变化</span><br><span class="line"><span class="built_in">touch</span> -m //修改文件内容的Modification时间，会导致Ctime时间变化</span><br><span class="line"><span class="built_in">touch</span> -t //这顶时间戳</span><br><span class="line"><span class="built_in">touch</span> -r //时间其他文件的时间戳</span><br></pre></td></tr></table></figure>
+
+<h3 id="复制文件或目录"><a href="#复制文件或目录" class="headerlink" title="复制文件或目录"></a>复制文件或目录</h3><h4 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a>cp命令</h4><p>​	用于复制文件或目录</p>
+<p>如果目标是目录，则把源文件代码复制到该目录中</p>
+<p>如果目标目标不存在，执行正常的复制操作</p>
+<p>如果目标是同名文件，则会进行覆盖</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> 源文件|源目录 目标文件|目标目录</span><br><span class="line">// 创建文件</span><br><span class="line"><span class="built_in">touch</span> 1.txt;</span><br><span class="line"><span class="built_in">mkdir</span> a;</span><br><span class="line"><span class="built_in">cp</span> -r 1.txt  a</span><br></pre></td></tr></table></figure>
+
+<h4 id="nv命令"><a href="#nv命令" class="headerlink" title="nv命令"></a>nv命令</h4><p>​	用于重命名或者移动文件&#x2F;目录</p>
+<p>如果源文件与目标文件在同一目录下，则执行改名操作</p>
+<p>如果目标是目录，则把源文件|源目录移动到该目录中</p>
+<p>如果目标不存在，则进行正常的复制操作</p>
+<p>如果目标是同名文件，则会覆盖</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> 源文件|源目录 目标文件|目标目录</span><br><span class="line"><span class="built_in">mv</span> 1.txt 3.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件查看类命令"><a href="#文件查看类命令" class="headerlink" title="文件查看类命令"></a>文件查看类命令</h3><h4 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h4><p>​	用于查看一个文件的内容，并显示在屏幕上</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> 文件名</span><br></pre></td></tr></table></figure>
+
+<h4 id="more-less命令"><a href="#more-less命令" class="headerlink" title="more&#x2F;less命令"></a>more&#x2F;less命令</h4><p>​	用于查看内容较多的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">more 文件名</span><br><span class="line">less 文件名</span><br></pre></td></tr></table></figure>
+
+<h4 id="head-tail-命令"><a href="#head-tail-命令" class="headerlink" title="head&#x2F;tail 命令"></a>head&#x2F;tail 命令</h4><p>​	用于查看内容的前十行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">head</span> 文件名</span><br><span class="line"><span class="built_in">tail</span> 文件名</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件归档命令"><a href="#文件归档命令" class="headerlink" title="文件归档命令"></a>文件归档命令</h3><h4 id="gzip-gunzip命令"><a href="#gzip-gunzip命令" class="headerlink" title="gzip&#x2F;gunzip命令"></a>gzip&#x2F;gunzip命令</h4><p>​	用于压缩&#x2F;解压缩文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gzip/gunzip [参数] 文件名</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件查找命令"><a href="#文件查找命令" class="headerlink" title="文件查找命令"></a>文件查找命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">grep[参数选项] 查找字符串 文件名</span><br><span class="line">	-c:统计包含<span class="string">&quot;查找字符串&quot;</span>的行数</span><br><span class="line">	-n:输出包含<span class="string">&quot;查找字符串&quot;</span>的行号和此行内容</span><br><span class="line">	-v:输出没有包含<span class="string">&quot;查找字符串&quot;</span>的行内容</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -367,7 +380,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://devslow.github.io/posts/4281705595/" title="Linux操作系统管理及应用">https://devslow.github.io/posts/4281705595/</a>
+      <a href="https://devslow.github.io/posts/0/" title="">https://devslow.github.io/posts/0/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -375,22 +388,16 @@
 </ul>
 </div>
 
-          <div class="post-tags">
-              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/1123518211/" rel="prev" title="Javaweb06-Servlet02">
-                  <i class="fa fa-angle-left"></i> Javaweb06-Servlet02
+                <a href="/posts/25635500/" rel="prev" title="尚硅谷_宋红康_JDBC总结">
+                  <i class="fa fa-angle-left"></i> 尚硅谷_宋红康_JDBC总结
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/25635500/" rel="next" title="尚硅谷_宋红康_JDBC总结">
-                  尚硅谷_宋红康_JDBC总结 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -430,7 +437,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:32</span>
+    <span title="站点阅读时长">2:34</span>
   </span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
@@ -507,7 +514,7 @@
 
 
   <script src="https://unpkg.com/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://devslow.github.io/posts/4281705595/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://devslow.github.io/posts/0/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <script src="/js/third-party/comments/livere.js"></script>
 <div class="moon-menu">
