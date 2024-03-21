@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -212,6 +212,176 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://devslow.github.io/posts/52683147/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/devSlow/ImgMap/master/img/avatar.jpg">
+      <meta itemprop="name" content="Slow">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Slow's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Slow's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/52683147/" class="post-title-link" itemprop="url">书城项目_02实现用户的注册与登录</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-03-21 22:29:42 / 修改时间：22:33:02" itemprop="dateCreated datePublished" datetime="2024-03-21T22:29:42+08:00">2024-03-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Javaweb/" itemprop="url" rel="index"><span itemprop="name">Javaweb</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Javaweb/%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">项目</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+      <i class="fa fa-thumb-tack"></i>
+      <font color=7D26CD>置顶</font>
+      <span class="post-meta-divider">|</span>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="JavaEE三层架构"><a href="#JavaEE三层架构" class="headerlink" title="JavaEE三层架构"></a>JavaEE三层架构</h1><p><img src="https://blogimgoss.oss-cn-nanjing.aliyuncs.com/img/JavaEE%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84.png" alt="JavaEE三层架构"></p>
+<table>
+<thead>
+<tr>
+<th>三层架构</th>
+<th>作用</th>
+<th>常用包名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>web 层</strong></td>
+<td>获取请求参数，<br />封装成bean对象  <br /> 调用service层处理业务</td>
+<td>com.atguigu.web&#x2F;servlet&#x2F;controller</td>
+</tr>
+<tr>
+<td><strong>service 层</strong></td>
+<td>处理业务逻辑<br />调用持久层保存到数据库</td>
+<td>com.atguigu.service</td>
+</tr>
+<tr>
+<td>Service 接口包</td>
+<td>定义业务接口</td>
+<td>com.atguigu.service</td>
+</tr>
+<tr>
+<td>Service 接口实现类</td>
+<td>实现定义的业务接口</td>
+<td>com.atguigu.service.impl</td>
+</tr>
+<tr>
+<td>**dao 持久层 **</td>
+<td>负责与数据库进行交互</td>
+<td>com.atguigu.dao</td>
+</tr>
+<tr>
+<td>Dao 接口包</td>
+<td>定义与数据库交互的一些接口</td>
+<td>com.atguigu.dao</td>
+</tr>
+<tr>
+<td>Dao 接口实现类</td>
+<td>实现定义的数据库交互接口</td>
+<td>com.atguigu.dao.impl</td>
+</tr>
+<tr>
+<td>实体 bean 对象</td>
+<td>Java中可以重复使用的简单组件，JavaBean 类</td>
+<td>com.atguigu.pojo&#x2F;entity&#x2F;domain&#x2F;bean</td>
+</tr>
+<tr>
+<td>测试包</td>
+<td>用于代码测试</td>
+<td>com.atguigu.test&#x2F;junit</td>
+</tr>
+<tr>
+<td>工具类</td>
+<td>第三方jar包</td>
+<td>com.atguigu.utils</td>
+</tr>
+</tbody></table>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/52683147/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://devslow.github.io/posts/3313990057/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -248,7 +418,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-17 12:10:55" itemprop="dateModified" datetime="2024-03-17T12:10:55+08:00">2024-03-17</time>
+      <time title="修改时间：2024-03-17 12:11:35" itemprop="dateModified" datetime="2024-03-17T12:11:35+08:00">2024-03-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -858,120 +1028,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://devslow.github.io/posts/3011710768/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/devSlow/ImgMap/master/img/avatar.jpg">
-      <meta itemprop="name" content="Slow">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Slow's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/3011710768/" class="post-title-link" itemprop="url">书城项目_01表单验证</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-02-06 16:06:34 / 修改时间：16:11:13" itemprop="dateCreated datePublished" datetime="2024-02-06T16:06:34+08:00">2024-02-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Javaweb/" itemprop="url" rel="index"><span itemprop="name">Javaweb</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Javaweb/%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">项目</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>324</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-      <i class="fa fa-thumb-tack"></i>
-      <font color=7D26CD>置顶</font>
-      <span class="post-meta-divider">|</span>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="书城项目第一阶段，表单验证"><a href="#书城项目第一阶段，表单验证" class="headerlink" title="书城项目第一阶段，表单验证"></a>书城项目第一阶段，表单验证</h1><h2 id="验证用户名"><a href="#验证用户名" class="headerlink" title="验证用户名"></a>验证用户名</h2><p>​	必须由字母，数字，下划线组成，长度为5-12位</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#sub_btn&quot;</span>).<span class="title function_">click</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// // 验证用户名：必须由字母，数字下划线组成，并且长度为5到12位</span></span><br><span class="line">    <span class="comment">// //1 获取用户名输入框里的内容</span></span><br><span class="line">    <span class="keyword">var</span> usernameText = $(<span class="string">&quot;#username&quot;</span>).<span class="title function_">val</span>();</span><br><span class="line">    <span class="comment">// //2 创建正则表达式对象</span></span><br><span class="line">    <span class="keyword">var</span> usernamePatt = <span class="regexp">/^\w&#123;5,12&#125;$/</span>;</span><br><span class="line">    <span class="comment">// //3 使用test方法验证</span></span><br><span class="line">    <span class="keyword">if</span> (!usernamePatt.<span class="title function_">test</span>(usernameText)) &#123;</span><br><span class="line">        <span class="comment">//  //4 提示用户结果</span></span><br><span class="line">        $(<span class="string">&quot;span.errorMsg&quot;</span>).<span class="title function_">text</span>(<span class="string">&quot;用户名不合法！&quot;</span>)</span><br><span class="line">        <span class="comment">//  $(&quot;span.errorMsg&quot;).text(&quot;用户名不合法！&quot;);</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/3011710768/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
@@ -994,14 +1052,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">42k</span>
+    <span title="站点总字数">44k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:34</span>
+    <span title="站点阅读时长">2:39</span>
   </span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
