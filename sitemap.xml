@@ -194,14 +194,14 @@
   </url>
   
   <url>
-    <loc>https://devslow.github.io/tags/Tomcat/</loc>
+    <loc>https://devslow.github.io/tags/Servlet/</loc>
     <lastmod>2024-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://devslow.github.io/tags/Servlet/</loc>
+    <loc>https://devslow.github.io/tags/Tomcat/</loc>
     <lastmod>2024-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -266,14 +266,14 @@
   </url>
   
   <url>
-    <loc>https://devslow.github.io/categories/Tomcat/</loc>
+    <loc>https://devslow.github.io/categories/Servlet/</loc>
     <lastmod>2024-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://devslow.github.io/categories/Servlet/</loc>
+    <loc>https://devslow.github.io/categories/Tomcat/</loc>
     <lastmod>2024-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -308,7 +308,7 @@
   </url>
   
   <url>
-    <loc>https://devslow.github.io/categories/Tomcat/Javaweb/</loc>
+    <loc>https://devslow.github.io/categories/Servlet/Javaweb/</loc>
     <lastmod>2024-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -329,7 +329,7 @@
   </url>
   
   <url>
-    <loc>https://devslow.github.io/categories/Servlet/Javaweb/</loc>
+    <loc>https://devslow.github.io/categories/Tomcat/Javaweb/</loc>
     <lastmod>2024-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -343,14 +343,14 @@
   </url>
   
   <url>
-    <loc>https://devslow.github.io/categories/JDBC/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://devslow.github.io/categories/Servlet/Javaweb/Tomcat/</loc>
     <lastmod>2024-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://devslow.github.io/categories/Servlet/Javaweb/Tomcat/</loc>
+    <loc>https://devslow.github.io/categories/JDBC/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2024-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
