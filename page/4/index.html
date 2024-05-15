@@ -342,7 +342,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-05-15 09:47:32 / 修改时间：10:00:07" itemprop="dateCreated datePublished" datetime="2024-05-15T09:47:32+08:00">2024-05-15</time>
+      <time title="创建时间：2024-05-15 09:47:32 / 修改时间：10:20:16" itemprop="dateCreated datePublished" datetime="2024-05-15T09:47:32+08:00">2024-05-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -365,14 +365,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.1k</span>
+      <span>1.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>8 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -476,59 +476,6 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">1</span></span><br><span class="line"><span class="built_in">sum</span>=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">101</span>):</span><br><span class="line">    <span class="keyword">if</span>(i%<span class="number">2</span>==<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="built_in">sum</span>+=i</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>)</span><br></pre></td></tr></table></figure>
 
 <h1 id="python图像处理"><a href="#python图像处理" class="headerlink" title="python图像处理"></a>python图像处理</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开并加载两张图像</span></span><br><span class="line">image1 = Image.<span class="built_in">open</span>(<span class="string">&quot;44444.jpg&quot;</span>)</span><br><span class="line">image2 = Image.<span class="built_in">open</span>(<span class="string">&quot;555555.jpg&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调整图像大小以确保尺寸相同</span></span><br><span class="line">image2 = image2.resize(image1.size)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将图像转换为 numpy 数组</span></span><br><span class="line">array1 = np.array(image1)</span><br><span class="line">array2 = np.array(image2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 图像加法</span></span><br><span class="line">add_result = np.clip(array1 + array2, <span class="number">0</span>, <span class="number">255</span>).astype(np.uint8)</span><br><span class="line">add_image = Image.fromarray(add_result)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 图像减法</span></span><br><span class="line">sub_result = np.clip(array1 - array2, <span class="number">0</span>, <span class="number">255</span>).astype(np.uint8)</span><br><span class="line">sub_image = Image.fromarray(sub_result)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示图像</span></span><br><span class="line">add_image.show()</span><br><span class="line">sub_image.show()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图像</span></span><br><span class="line">add_image.save(<span class="string">&quot;add_result.jpg&quot;</span>)</span><br><span class="line">sub_image.save(<span class="string">&quot;sub_result.jpg&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><img src="C:\Users\slow\AppData\Local\Programs\PixPin\Temp\Clip_2024-05-13_17-46-53.png" alt="Clip_2024-05-13_17-46-53"></p>
-<p>首先，我们来分析这个函数 <code>foo</code> 和它的递归逻辑。</p>
-<p>函数 <code>foo</code> 接受两个参数：一个列表 <code>list</code> 和一个数字 <code>num</code>。函数的功能基于 <code>num</code> 的值来修改 <code>list</code>。</p>
-<ol>
-<li>如果 <code>num == 1</code>，函数在 <code>list</code> 的末尾添加数字 5。</li>
-<li>如果 <code>num == 2</code>，函数首先递归调用自身，将 <code>num</code> 设置为 1（即调用 <code>foo(list, 1)</code>），然后在 <code>list</code> 的末尾添加数字 1。由于 <code>foo(list, 1)</code> 会将 5 添加到 <code>list</code> 的末尾，所以在 <code>num == 2</code> 的情况下，<code>list</code> 会被添加 5 和 1。</li>
-<li>如果 <code>num &gt; 2</code>，函数首先递归调用自身，将 <code>num</code> 减 1，然后将 <code>list</code> 的最后两个元素的和添加到 <code>list</code> 的末尾。</li>
-</ol>
-<p>现在，我们来看 <code>foo(mylist, 8)</code> 的调用过程：</p>
-<ol>
-<li>调用 <code>foo(mylist, 8)</code>。</li>
-<li>由于 <code>num &gt; 2</code>，递归调用 <code>foo(mylist, 7)</code>。</li>
-<li>在 <code>foo(mylist, 7)</code> 中，由于 <code>num &gt; 2</code>，递归调用 <code>foo(mylist, 6)</code>。<br>…（继续递归，直到 <code>num</code> 减到 1 或 2）</li>
-</ol>
-<p>递归会一直进行到 <code>num</code> 变为 1 或 2。</p>
-<ul>
-<li>当 <code>num</code> 为 1 时，<code>list</code> 末尾添加 5。</li>
-<li>当 <code>num</code> 为 2 时，<code>list</code> 末尾首先添加 5（来自 <code>foo(list, 1)</code> 的调用），然后添加 1。</li>
-</ul>
-<p>然后，递归开始返回，并在每次返回时，将 <code>list</code> 的最后两个元素的和添加到 <code>list</code> 的末尾。</p>
-<p>对于 <code>foo(mylist, 8)</code>，<code>mylist</code> 的变化过程如下：</p>
-<ul>
-<li>初始时，<code>mylist = []</code></li>
-<li>调用 <code>foo(mylist, 8)</code> 后，<code>mylist</code> 会根据递归过程逐渐添加元素。</li>
-</ul>
-<p>最终，<code>mylist</code> 的值会是斐波那契数列的一个变种，其中第一个和第二个数是 5 和 1，之后的每个数都是前两个数的和。</p>
-<p>因此，输出将是：<code>[5, 1, 6, 7, 13, 20, 33, 53]</code></p>
-<p>这个序列不是标准的斐波那契数列（标准的是从 0 和 1 开始），但是它是基于相同的规则生成的。</p>
-<p>考虑到您给出的代码逻辑和列表 <code>a</code> 的内容，程序在统计列表中每个元素的十位数（忽略个位数小于10的元素）出现的次数，并试图找出哪个十位数出现的次数最多。但请注意，列表 <code>a</code> 中的 <code>21</code> 的十位数是 <code>2</code>，但由于整数除法的性质（即 <code>//</code>），<code>21 // 10</code> 的结果是 <code>2</code> 而不是 <code>0</code>（因为对于个位数，整除10后仍然得到它们自己作为十位数）。</p>
-<p>但是，由于列表 <code>a</code> 中没有数字的十位数是 <code>0</code> 到 <code>9</code> 的所有值，所以数组 <code>s</code> 的某些元素（例如 <code>s[3]</code> 到 <code>s[8]</code>）将保持为 <code>0</code>。</p>
-<p>现在，让我们运行程序并查看结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">50</span>, <span class="number">75</span>, <span class="number">53</span>, <span class="number">92</span>, <span class="number">77</span>, <span class="number">64</span>, <span class="number">79</span>, <span class="number">21</span>]</span><br><span class="line">s = [<span class="number">0</span>] * <span class="number">10</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(a)):</span><br><span class="line">    k = a[i] // <span class="number">10</span></span><br><span class="line">    s[k] = s[k] + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">m = s[<span class="number">0</span>]</span><br><span class="line">k = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> k &lt; <span class="number">10</span>:</span><br><span class="line">    <span class="keyword">if</span> s[k] &gt; m:</span><br><span class="line">        m = s[k]</span><br><span class="line">    k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;m=&#x27;</span>, m)</span><br></pre></td></tr></table></figure>
-
-<p>输出将是：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m= 3</span><br></pre></td></tr></table></figure>
-
-<p>解释：</p>
-<ul>
-<li><code>50</code> 的十位数是 <code>5</code>，所以 <code>s[5]</code> 增加 1。</li>
-<li><code>75</code> 的十位数是 <code>7</code>，所以 <code>s[7]</code> 增加 1。</li>
-<li><code>53</code> 的十位数是 <code>5</code>，所以 <code>s[5]</code> 再增加 1。</li>
-<li><code>92</code> 的十位数是 <code>9</code>，所以 <code>s[9]</code> 增加 1。</li>
-<li><code>77</code> 的十位数是 <code>7</code>，所以 <code>s[7]</code> 再增加 1。</li>
-<li><code>64</code> 的十位数是 <code>6</code>，但 <code>s[6]</code> 不会被访问（因为没有这样的数字在列表中）。</li>
-<li><code>79</code> 的十位数是 <code>7</code>，所以 <code>s[7]</code> 再增加 1。</li>
-<li><code>21</code> 的十位数是 <code>2</code>，所以 <code>s[2]</code> 增加 1。</li>
-</ul>
-<p>因此，<code>s</code> 的内容是 <code>[0, 1, 1, 0, 2, 0, 3, 0, 1, 1]</code>。其中，最大的值是 <code>3</code>，对应于十位数 <code>7</code>，它在列表中出现了三次。所以输出是 <code>m= 3</code>。</p>
 
       
     </div>
@@ -680,14 +627,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">82k</span>
+    <span title="站点总字数">81k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">4:57</span>
+    <span title="站点阅读时长">4:54</span>
   </span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
